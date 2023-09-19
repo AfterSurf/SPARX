@@ -1,8 +1,10 @@
 import express from "express";
 import { graphqlHTTP } from "express-graphql";
 import { buildSchema } from "graphql";
+import cors from "cors"
 
 import {phoneData} from "./telefonbuch633bf1_id.js"
+
 
 
 // GraphQL Schema
@@ -30,26 +32,17 @@ function getPhone(args) {
 
 // TEST: for number geht!
 function getNumber(args) {
+    const results = []
     for (const phone of phoneData) {
-        if (phone.name === args.name) {
-        return [phone];
+        if (phone.name.includes(args.name)) {
+        results.push(phone)
         }
     }
+    return results
 }
 
-// toDO!
-// query schreiben, dass er anhand des Namens sucht und schon mit den Anfangsbuchstaben anfängt
-
-
 function getPhones() {
-// function getPhones(args) {
-    // if (args.category) {
-    //   return imagesData.filter(
-    //     (image) => image.category.toLowerCase() === args.category.toLowerCase()
-    //   );
-    // } else {
       return phoneData;
-    // }
   }
 
   // Resolver
@@ -61,6 +54,8 @@ const root = {
 
   //Create an express server and GraphQL endpoint
 const app = express();
+
+app.use(cors())
 app.use(
   "/graphql",
   graphqlHTTP({

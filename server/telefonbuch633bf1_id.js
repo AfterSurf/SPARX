@@ -13,7 +13,17 @@ export const phoneData = [
   {
     id:3,
     name: "A",
-    phone: "0171/14294053"
-},
+    phone: "0171/1111111"
+  },
+  {
+    id:4,
+    name: "ABC",
+    phone: "0171/22222222"
+  },
+  {
+    id:5,
+    name: "BCA",
+    phone: "0171/333333333"
+  },
 ]
 
