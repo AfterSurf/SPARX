@@ -1,23 +1,9 @@
-import { useQuery, gql } from "@apollo/client";
-
-const query = gql`
-    query getSingleNumber($name: String!) {
-        number(name: $name) {
-        name
-        phone
-        }
-    }
-`;
+import  {useQueryNew}  from "../utils/gqlQueries"
 
 export const SearchForm = () => {
     
-    const { data, loading, error, refetch } = useQuery(query,{variables:{
-        "name": "A"
-      }});
+    const { data, loading, error, refetch } = useQueryNew({"name": "A"})
 
-
-
-    console.log("data: ", JSON.stringify(data))
     if (loading) return <h1>Loading...</h1>;
     if (error) return <pre>{error.message}</pre>
 
