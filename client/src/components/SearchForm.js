@@ -34,10 +34,10 @@ export const SearchForm = () => {
     return (
     <div className="grid">
         <div >
-            <h1>SEARCH FOR PHONE</h1>
+            <h1 className="title">SEARCH FOR PHONE</h1>
             <h4 className="phoneMagic">by <span className="brand">PhoneMagic</span></h4>
-            <TextField onChange={(e) => { setName(e.target.value); handleValidation(e)}} error={!valid} helperText={valid? "" : "Incorrect entry."}/>
-            <Button onClick={() => {console.log("search ME! ", name); refetch({"name": name}); console.log("data:",JSON.stringify(data))}}> MUI button</Button>
+            <TextField onChange={(e) => {handleValidation(e); setName(e.target.value); refetch({"name": name}); }} error={!valid} helperText={valid? "" : "Incorrect entry."}/>
+            {/* <Button onClick={() => {console.log("search ME! ", name); refetch({"name": name}); console.log("data:",JSON.stringify(data))}}> MUI button</Button> */}
         </div>
        <div className="cardContainer">
             {data.number.map(element =>{return ( <NameCard element={element}/>)})}

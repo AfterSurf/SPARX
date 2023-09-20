@@ -3,7 +3,8 @@ import { graphqlHTTP } from "express-graphql";
 import { buildSchema } from "graphql";
 import cors from "cors"
 
-import {phoneData} from "./telefonbuch633bf1_id.js"
+// import {phoneData} from "./telefonbuch633bf1_id.js"
+import {phoneData} from "./telefonbuch633bf1.js"
 
 
 

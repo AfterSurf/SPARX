@@ -3,7 +3,7 @@
     margin: 0 1rem; 
     display: flex;
     flex-wrap: wrap;
-    align-content: space-evenly;
+    align-content: start;
     height: 100vh;
     overflow: auto;
 }
@@ -24,6 +24,18 @@
     -webkit-text-fill-color: transparent;
 }
 
+.title::after {
+        content: "";
+        display: block;
+        width: 15%;
+        height: 30px;
+        background-color: #FFE600;
+        margin-top: -25px;
+        margin-left: 27vw;
+        
+    
+}
+
 @media(max-width: 1140px) {
     
     .grid {
@@ -33,5 +45,10 @@
     .cardContainer {
         height: 60vh;
         align-content: normal;
+    }
+
+    .title::after {
+
+ margin-left: 60vw;
     }
 }
