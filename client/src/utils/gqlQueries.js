@@ -13,6 +13,6 @@ const query = gql`
 //    "name": "A"
 // }
 
-export const useQueryNew = (variable) => {
-    return  useQuery(query,{variables:variable});
+export const useQueryNew = (name) => {
+    return  useQuery(query,{variables:{"name":name}});
 }
