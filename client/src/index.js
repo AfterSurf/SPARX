@@ -11,7 +11,6 @@ const client = new ApolloClient({
 });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-// react strict mode?!
 root.render(
   <ApolloProvider client={client}>
     <App />

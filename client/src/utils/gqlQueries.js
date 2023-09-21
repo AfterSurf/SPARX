@@ -9,10 +9,6 @@ const query = gql`
     }
 `;
 
-// v: {
-//    "name": "A"
-// }
-
 export const useQueryNew = (name) => {
     return  useQuery(query,{variables:{"name":name}});
 }

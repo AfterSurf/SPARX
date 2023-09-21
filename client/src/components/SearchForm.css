@@ -1,5 +1,4 @@
 .cardContainer {
-    /* background-color: red; */
     background: -webkit-linear-gradient(rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(6,68,160,1) 54%, rgba(5,87,172,1) 60%, rgba(3,140,207,1) 77%, rgb(48, 154, 186) 89%, rgb(6, 96, 113) 100%);
     margin: 0 1rem; 
     display: flex;
@@ -18,7 +17,6 @@
 }
 
 .brand {
-    /* font-size: 72px; */
     background: -webkit-linear-gradient(rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(6,68,160,1) 54%, rgba(5,87,172,1) 60%, rgba(3,140,207,1) 77%, rgba(60,155,184,1) 89%, rgba(0,212,255,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -29,26 +27,29 @@
         display: block;
         width: 15%;
         height: 30px;
-        background-color: #FFE600;
+        background-color: #f04d44ec;
         margin-top: -25px;
         margin-left: 27vw;
-        
-    
+}
+
+.instructions {
+padding-right: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 @media(max-width: 1140px) {
     
     .grid {
         grid-template-columns: 1fr;
+        grid-template-rows:16rem 1fr;
     }
 
     .cardContainer {
-        height: 60vh;
+        height: 70vh;
         align-content: normal;
     }
 
     .title::after {
-
- margin-left: 60vw;
+        margin-left: 60vw;
     }
 }

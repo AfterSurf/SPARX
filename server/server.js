@@ -3,26 +3,21 @@ import { graphqlHTTP } from "express-graphql";
 import { buildSchema } from "graphql";
 import cors from "cors"
 
-// import {phoneData} from "./telefonbuch633bf1_id.js"
 import {phoneData} from "./telefonbuch633bf1.js"
-
 
 
 // GraphQL Schema
 const schema = buildSchema(`
       type Query {
-        phone(id: Int!): Phone
         number(name: String): [Phone]
         phones(name: String): [Phone]
       }
       type Phone {
-        id: Int
         name: String,
         phone: String
       }
 `);
 
-// Get single Image using id
 function getPhone(args) {
     for (const phone of phoneData) {
         if (phone.id === args.id) {
@@ -31,11 +26,10 @@ function getPhone(args) {
     }
 }
 
-// TEST: for number geht!
 function getNumber(args) {
     const results = []
     for (const phone of phoneData) {
-        if (phone.name.includes(args.name)) {
+        if (phone.name.toUpperCase().includes(args.name.toUpperCase())) {
         results.push(phone)
         }
     }
@@ -46,14 +40,14 @@ function getPhones() {
       return phoneData;
   }
 
-  // Resolver
+// Resolver
 const root = {
     phone: getPhone,
     number: getNumber,
     phones: getPhones,
   };
 
-  //Create an express server and GraphQL endpoint
+// Create an express server and GraphQL endpoint
 const app = express();
 
 app.use(cors())
@@ -66,7 +60,6 @@ app.use(
   })
 );
 
-//Listening to our server
 app.listen(5000, () => {
   console.log("GraphQL server with Express running on localhost:5000/graphql");
 });

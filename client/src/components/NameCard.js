@@ -7,7 +7,7 @@ export const NameCard = ({element}) => {
     const {name, phone} = element
     return (
         <div className='auto'>
-            <Card sx={{ width: 200, margin: "2rem", backgroundColor: "white", }}>
+            <Card sx={{ width: 260, margin: "2rem", backgroundColor: "white", }}>
                 <CardContent sx={{ display:"grid", gridTemplateColumns:" 50px 1fr", gridTemplateRows:"1fr 1fr"}}>
                     
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>Name:</Typography>
