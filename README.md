@@ -11,13 +11,13 @@ Client und Server sind in diesem Projekt getrennt und müssen in zwei separaten 
 Unter /client:
 
 Installieren der Packete: 
-
+```
 npm install 
-
+```
 Starten der Anwendung: 
-
+```
 npm start
-
+```
 Nun läuft das React-Frontend auf http://localhost:3000/
 
 ### Server 
@@ -25,13 +25,13 @@ Nun läuft das React-Frontend auf http://localhost:3000/
 Unter /server:
 
 Installieren der Packete: 
-
+```
 npm i --legacy-peer-deps
-
+```
 Starten der Anwendung: 
-
+```
 npm start
-
+```
 Nun läuft das express-Backend auf http://localhost:5000/
 
 Endpoint ist: http://localhost:5000/graphql
