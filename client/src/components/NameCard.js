@@ -7,9 +7,12 @@ export const NameCard = ({element}) => {
     const {name, phone} = element
     return (
         <div className='auto'>
-            <Card sx={{ width: 200, margin: "2rem", backgroundColor: "brown" }}>
-                <CardContent>
+            <Card sx={{ width: 200, margin: "2rem", backgroundColor: "white", }}>
+                <CardContent sx={{ display:"grid", gridTemplateColumns:" 50px 1fr", gridTemplateRows:"1fr 1fr"}}>
+                    
+                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>Name:</Typography>
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>{name}</Typography>
+                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>Phone:</Typography>
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>{phone}</Typography>
                 </CardContent>
             </Card>

@@ -17,6 +17,9 @@ https://github.com/dabit3/graphql-search/blob/master/src/App.js
 
 - die cards schöner machen: icons?! 
 
-- regex erst zünden, wenn Werte eingegeben werden 
+- regex erst zünden, wenn Werte eingegeben werden                   
 
 - aufräumen
+
+- readme überarbeiten für die Übergabe 
+    * scripte in der package.json

@@ -22,9 +22,9 @@ export const SearchForm = () => {
     };
 
     useEffect(() => {
-        console.log("rendered SearchForm")
+        console.log("rendered SearchForm: ", data?.number.length)
         
-    })
+    },[data])
     
     
 

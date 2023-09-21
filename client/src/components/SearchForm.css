@@ -1,5 +1,6 @@
 .cardContainer {
-    background-color: red;
+    /* background-color: red; */
+    background: -webkit-linear-gradient(rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(6,68,160,1) 54%, rgba(5,87,172,1) 60%, rgba(3,140,207,1) 77%, rgb(48, 154, 186) 89%, rgb(6, 96, 113) 100%);
     margin: 0 1rem; 
     display: flex;
     flex-wrap: wrap;
@@ -10,8 +11,7 @@
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+    grid-template-columns: 1fr 1fr;}
 .phoneMagic {
     margin-left: 14rem;
     margin-top: -1rem
