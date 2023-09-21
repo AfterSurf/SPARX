@@ -9,16 +9,11 @@ https://github.com/dabit3/graphql-search/blob/master/src/App.js
 
 ### Todos:
 
-- den Filteralgorithmus schöner machen 
- --> test Moh
-
-- überschrift und nutzerhinweise über das Eingabefeld           
-
-- aufräumen
 
 - readme überarbeiten für die Übergabe 
     * scripte in der package.json
 
+- gitIgnore checken
 
 
 #### done
@@ -29,4 +24,11 @@ https://github.com/dabit3/graphql-search/blob/master/src/App.js
 
 - die cards schöner machen: icons?! 
 
-- regex erst zünden, wenn Werte eingegeben werden        
+- regex erst zünden, wenn Werte eingegeben werden   
+
+- den Filteralgorithmus schöner machen 
+ --> test Moh
+
+- überschrift und nutzerhinweise über das Eingabefeld           
+
+- aufräumen
