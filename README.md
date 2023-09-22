@@ -51,4 +51,4 @@ Folgende Schritte "sollten" umgesetzt werden, um die Anwendung abzurunden.
 Viel Spaß beim Ausprobieren der Anwendung. 
 Beste Grüße 
 
-Alexander Linß 
+Alexander Linß | alexanderlinss@web.de
