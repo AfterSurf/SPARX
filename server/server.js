@@ -1,10 +1,9 @@
 import express from "express";
 import { graphqlHTTP } from "express-graphql";
 import { buildSchema } from "graphql";
-import cors from "cors"
+import cors from "cors";
 
-import {phoneData} from "./telefonbuch633bf1.js"
-
+import { phoneData } from "./telefonbuch633bf1.js";
 
 // GraphQL Schema
 const schema = buildSchema(`
@@ -19,38 +18,38 @@ const schema = buildSchema(`
 `);
 
 function getPhone(args) {
-    for (const phone of phoneData) {
-        if (phone.id === args.id) {
-        return phone;
-        }
+  for (const phone of phoneData) {
+    if (phone.id === args.id) {
+      return phone;
     }
+  }
 }
 
 function getNumber(args) {
-    const results = []
-    for (const phone of phoneData) {
-        if (phone.name.toUpperCase().includes(args.name.toUpperCase())) {
-        results.push(phone)
-        }
+  const results = [];
+  for (const phone of phoneData) {
+    if (phone.name.toUpperCase().includes(args.name.toUpperCase())) {
+      results.push(phone);
     }
-    return results
+  }
+  return results;
 }
 
 function getPhones() {
-      return phoneData;
-  }
+  return phoneData;
+}
 
 // Resolver
 const root = {
-    phone: getPhone,
-    number: getNumber,
-    phones: getPhones,
-  };
+  phone: getPhone,
+  number: getNumber,
+  phones: getPhones,
+};
 
 // Create an express server and GraphQL endpoint
 const app = express();
 
-app.use(cors())
+app.use(cors());
 app.use(
   "/graphql",
   graphqlHTTP({

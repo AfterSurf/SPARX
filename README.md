@@ -39,7 +39,12 @@ Endpoint ist: http://localhost:5000/graphql
 
 ### Ausblick
 
-...
+Folgende Schritte "sollten" umgesetzt werden, um die Anwendung abzurunden. 
+
+* Auflösen der LegacyDependencies auf Serverseite 
+* Testing der Komponenten und der Middleware (Server)
+* Front- und Backend "Containerisieren" (Docker + Kubernetes zB)
+* Integration der Anwendung mittels Pipeline: Testing und Deployment (inkl. Staging)
 
 ## letzte Worte
 
