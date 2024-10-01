@@ -1,6 +1,4 @@
-## Willkommen zu Phone Magic
-
-Diese Anwendung ist Teil meiner Bewerbung bei der Geomagic GmbH Leipzig
+# Willkommen zu Phone Magic
 
 ## Starten der Anwendung 
 
